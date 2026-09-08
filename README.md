@@ -89,8 +89,8 @@ Cada etapa cierra con un commit funcional que deja un estado recuperable.
 
 | Etapa | Alcance | Criterio de cierre | Estado |
 |---|---|---|---|
-| 1 | MAX30102 solo | Responde en 0x57 y PART_ID correcto | ☐ |
-| 2 | + MPU6050 | Ambas direcciones presentes, ninguna se pierde | ☐ |
+| 1 | MAX30102 solo | Responde en 0x57 y PART_ID correcto | ☑ |
+| 2 | + MPU6050 | Ambas direcciones presentes, ninguna se pierde | ☑ |
 | 3 | + DS18B20 | Temperatura coherente (ni 85 °C ni −127 °C) | ☐ |
 | 4 | + RC522 | UID legible sin degradar los sensores previos | ☐ |
 | 5 | Integración | 10 min continuos sin reinicios ni pérdida de tramas | ☐ |
