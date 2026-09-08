@@ -4,8 +4,8 @@
 Escuela de Ingeniería Civil Biomédica, Facultad de Ingeniería, Universidad de Valparaíso
 
 **Integrantes:**
-- Nombre Apellido — [@usuario-github]
-- Nombre Apellido — [@usuario-github]
+- Camila Díaz — [cxmila1508]
+- Gabriela Garfe — [Gabriela2005-yuki]
 
 ---
 
