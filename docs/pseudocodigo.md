@@ -1,7 +1,7 @@
 # Diseño del firmware — Nodo de adquisición ESP32
 
 Proyecto 6 · Monitor Inalámbrico de Seguridad e Intervención Preventiva
-en Unidades de Internación Psiquiátrica
+en Unidades de Internación Psiquiátrica 
 
 Este documento define la arquitectura **antes** de escribir el código.
 El firmware de `firmware/` debe ser una transcripción de lo que sigue.
