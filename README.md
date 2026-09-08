@@ -138,5 +138,5 @@ Convención de mensajes: `etapaN: qué quedó funcionando` o
 ## Bitácora
 
 | Fecha | Etapa | Resultado | Responsable |
-|---|---|---|---|
-| | | | |
+|08/09| 1 | MAX30102 solo | Responde en 0x57 y PART_ID correcto | ☑ |
+|08/09| 2 | + MPU6050 | Ambas direcciones presentes, ninguna se pierde | ☑ |
