@@ -146,4 +146,5 @@ Convención de mensajes: `etapaN: qué quedó funcionando` o
 | 23/09/2026 | Configuración | .gitignore para excluir compilados y credenciales | Camila |
 | 23/09/2026 | 5 | Migración a FreeRTOS: 4 tareas fijadas a ambos núcleos, datos protegidos con mutex, compilando | Camila |
 | 23/09/2026 | docs | Estructura docs/, actualización de pseudocódigo, referencias IEEE y organización de firmware | Gabriela |
+| 23/09/2026 | firmware | Reorganización de etapas 2, 3 y 4 dentro de firmware/ | Gabriela |
 
