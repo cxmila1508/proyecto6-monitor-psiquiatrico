@@ -93,7 +93,7 @@ Cada etapa cierra con un commit funcional que deja un estado recuperable.
 | 2 | + MPU6050 | Ambas direcciones presentes, ninguna se pierde | Compila · pendiente validación en lab |
 | 3 | + DS18B20 | Temperatura coherente (ni 85 °C ni −127 °C) | Compila · pendiente validación en lab |
 | 4 | + RC522 | UID legible sin degradar los sensores previos | Compila · pendiente validación en lab |
-| 5 | Migración a FreeRTOS | Tareas distribuidas en ambos núcleos sin pérdida de muestras | En desarrollo |
+| 5 | Migración a FreeRTOS | Tareas distribuidas en ambos núcleos sin pérdida de muestras | Compila · pendiente validación en lab |
 
 ---
 
@@ -144,3 +144,4 @@ Convención de mensajes: `etapaN: qué quedó funcionando` o
 | 08/09/2026 | 3 | DS18B20 con máquina de estados no bloqueante, compilando | Camila |
 | 23/09/2026 | 4 | RC522 por SPI y actuadores sin delay, compilando | Camila |
 | 23/09/2026 | Configuración | .gitignore para excluir compilados y credenciales | Camila |
+| 23/09/2026 | 5 | Migración a FreeRTOS: 4 tareas fijadas a ambos núcleos, datos protegidos con mutex, compilando | Camila |
