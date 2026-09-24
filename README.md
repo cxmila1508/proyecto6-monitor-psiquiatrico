@@ -89,11 +89,11 @@ Cada etapa cierra con un commit funcional que deja un estado recuperable.
 
 | Etapa | Alcance | Criterio de cierre | Estado |
 |---|---|---|---|
-| 1 | MAX30102 solo | Responde en 0x57 y PART_ID correcto | ☐ |
-| 2 | + MPU6050 | Ambas direcciones presentes, ninguna se pierde | ☐ |
-| 3 | + DS18B20 | Temperatura coherente (ni 85 °C ni −127 °C) | ☐ |
-| 4 | + RC522 | UID legible sin degradar los sensores previos | ☐ |
-| 5 | Integración | 10 min continuos sin reinicios ni pérdida de tramas | ☐ |
+| 1 | MAX30102 solo | Responde en 0x57 y PART_ID correcto | Compila · pendiente validación en lab |
+| 2 | + MPU6050 | Ambas direcciones presentes, ninguna se pierde | Compila · pendiente validación en lab |
+| 3 | + DS18B20 | Temperatura coherente (ni 85 °C ni −127 °C) | Compila · pendiente validación en lab |
+| 4 | + RC522 | UID legible sin degradar los sensores previos | Compila · pendiente validación en lab |
+| 5 | Migración a FreeRTOS | Tareas distribuidas en ambos núcleos sin pérdida de muestras | En desarrollo |
 
 ---
 
@@ -139,4 +139,8 @@ Convención de mensajes: `etapaN: qué quedó funcionando` o
 
 | Fecha | Etapa | Resultado | Responsable |
 |---|---|---|---|
-| | | | |
+| 08/09/2026 | Estructura | Repositorio, README y pseudocódigo inicial | Camila |
+| 08/09/2026 | 1 y 2 | Escáner I²C y bus compartido MAX30102 + MPU6050 compilando | Camila |
+| 08/09/2026 | 3 | DS18B20 con máquina de estados no bloqueante, compilando | Camila |
+| 23/09/2026 | 4 | RC522 por SPI y actuadores sin delay, compilando | Camila |
+| 23/09/2026 | Configuración | .gitignore para excluir compilados y credenciales | Camila |
