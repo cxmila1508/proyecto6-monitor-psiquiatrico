@@ -1,0 +1,25 @@
+# Compilación Arduino / ESP32
+build/
+*.bin
+*.elf
+*.map
+*.hex
+
+# Editores
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Credenciales: nunca versionar
+# La Fase 2 usará SSID y contraseña Wi-Fi
+secrets.h
+credenciales.h
+*.key
+*.pem
+
+# Temporales de Word
+~$*.docx
