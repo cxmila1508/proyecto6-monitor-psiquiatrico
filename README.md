@@ -145,3 +145,5 @@ Convención de mensajes: `etapaN: qué quedó funcionando` o
 | 23/09/2026 | 4 | RC522 por SPI y actuadores sin delay, compilando | Camila |
 | 23/09/2026 | Configuración | .gitignore para excluir compilados y credenciales | Camila |
 | 23/09/2026 | 5 | Migración a FreeRTOS: 4 tareas fijadas a ambos núcleos, datos protegidos con mutex, compilando | Camila |
+| 23/09/2026 | docs | Estructura docs/, actualización de pseudocódigo, referencias IEEE y organización de firmware | Gabriela |
+
