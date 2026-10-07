@@ -1,6 +1,4 @@
-/* =====================================================================
-   ETAPA 5 — Migración a FreeRTOS
-   ===================================================================== */
+/* Módulo5 — Migración a FreeRTOS*/
 
 #include <Wire.h>
 #include "MAX30105.h"
@@ -19,7 +17,7 @@
 #define DIR_MPU6050         0x68
 #define PIN_ONEWIRE          4
 #define RESOLUCION_DS18B20  12
-#define TIEMPO_CONVERSION_DS18B20  750   // ms a 12 bits
+#define TIEMPO_CONVERSION_DS18B20  750   //ms a 12 bits
 #define PIN_RC522_SS         5
 #define PIN_RC522_RST       27
 #define PIN_LED_VERDE       25
@@ -33,15 +31,13 @@
 #define PRIO_DS18B20         2
 #define PRIO_RFID            2
 #define PRIO_DIAGNOSTICO     1
-#define PILA_TAREA        4096   // bytes
+#define PILA_TAREA        4096   //bytes
 #define PERIODO_I2C_MS          10
 #define PERIODO_DS18B20_MS    1000
 #define PERIODO_RFID_MS         50
 #define PERIODO_DIAGNOSTICO_MS 1000
-
-//aceptacion de fallos
+//en caso de que ocurran 5 intentos seguidos fallados se reporta un fallo
 #define UMBRAL_FALLOS            5
-
 #define UMBRAL_SIN_MUESTRAS     25
 //rangos aceptables
 #define IR_MINIMO_CONTACTO  50000UL
@@ -51,7 +47,6 @@
 #define TEMP_MINIMA_C          20.0
 #define TEMP_MAXIMA_C          45.0
 #define SERIAL_BAUDIOS      115200
-
 //tags autorizados
 const char* TAGS_AUTORIZADOS[] = {
   "A3B21C04",
@@ -60,7 +55,7 @@ const char* TAGS_AUTORIZADOS[] = {
 const uint8_t CANTIDAD_TAGS_AUTORIZADOS =
     sizeof(TAGS_AUTORIZADOS) / sizeof(TAGS_AUTORIZADOS[0]);
 
-//modulo de datoos
+//modulo de datos
 enum EstadoModulo {
   NO_INICIALIZADO,
   LECTURA_OK,
@@ -68,7 +63,6 @@ enum EstadoModulo {
   FUERA_DE_RANGO,
   SIN_DATO
 };
-
 struct Medicion {
   float        valor;
   const char*  unidad;
@@ -77,7 +71,6 @@ struct Medicion {
   bool         valida;
   EstadoModulo estado;
 };
-
 const char* nombreEstado(EstadoModulo e) {
   switch (e) {
     case NO_INICIALIZADO: return "NO_INIT";
@@ -88,7 +81,6 @@ const char* nombreEstado(EstadoModulo e) {
     default:              return "?";
   }
 }
-
 Medicion crearMedicion(float valor, const char* unidad,
                        const char* origen, EstadoModulo estado) {
   Medicion m;
