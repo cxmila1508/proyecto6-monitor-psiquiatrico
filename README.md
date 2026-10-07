@@ -54,21 +54,10 @@ Todo el sistema opera a **3.3 V**. El RC522 no tolera 5 V.
 | LED rojo | GPIO | — | 26 | Acceso denegado |
 | Buzzer | GPIO | — | 33 | Alarma local |
 
-### Nota sobre las pull-ups del bus I²C
-
-Las resistencias externas de 4.7 kΩ son **condicionales**. Los breakouts
-comerciales suelen integrar sus propias pull-ups; instalarlas en paralelo
-reduce la resistencia equivalente por debajo del margen seguro.
-
-Procedimiento: medir la resistencia entre SDA y 3V3 con el circuito **sin
-alimentar**. Si el valor está entre 1 kΩ y 10 kΩ, los módulos ya las traen y
-no se agregan externas.
 
 Límites de diseño calculados (ver informe, sección Cálculos de diseño):
 - R mínima ≈ 967 Ω, con V_DD = 3.3 V, V_OL = 0.4 V, I_OL = 3 mA
 - R máxima ≈ 11.8 kΩ a 100 kHz, con C_bus ≈ 100 pF y t_r ≤ 1000 ns
-
-La pull-up del DS18B20 sí es obligatoria: el sensor no integra ninguna.
 
 ---
 
@@ -89,11 +78,11 @@ Cada etapa cierra con un commit funcional que deja un estado recuperable.
 
 | Etapa | Alcance | Criterio de cierre | Estado |
 |---|---|---|---|
-| 1 | MAX30102 solo | Responde en 0x57 y PART_ID correcto | Compila · pendiente validación en lab |
-| 2 | + MPU6050 | Ambas direcciones presentes, ninguna se pierde | Compila · pendiente validación en lab |
-| 3 | + DS18B20 | Temperatura coherente (ni 85 °C ni −127 °C) | Compila · pendiente validación en lab |
-| 4 | + RC522 | UID legible sin degradar los sensores previos | Compila · pendiente validación en lab |
-| 5 | Migración a FreeRTOS | Tareas distribuidas en ambos núcleos sin pérdida de muestras | Compila · pendiente validación en lab |
+| 1 | MAX30102 solo | Responde en 0x57 y PART_ID correcto | Compila · Listo |
+| 2 | + MPU6050 | Ambas direcciones presentes, ninguna se pierde | Compila · Listo |
+| 3 | + DS18B20 | Temperatura coherente (ni 85 °C ni −127 °C) | Compila · Listo |
+| 4 | + RC522 | UID legible sin degradar los sensores previos | Compila · Listo |
+| 5 | Migración a FreeRTOS | Tareas distribuidas en ambos núcleos sin pérdida de muestras | Compila · Listo |
 
 ---
 
@@ -111,9 +100,6 @@ Librerías utilizadas:
 | OneWire | P. Stoffregen | Bus 1-Wire |
 | DallasTemperature | M. Burton | DS18B20 |
 | MFRC522 | GithubCommunity | RC522 |
-
-Registrar la versión exacta de cada librería una vez instaladas: la
-reproducibilidad del build forma parte de la documentación técnica.
 
 ---
 
