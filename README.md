@@ -31,7 +31,7 @@ silenciar la alarma.
 |---|---|---|
 | 1 | Nodo de adquisición ESP32 | Listo |
 | 2 | Canal inalámbrico seguro con FreeRTOS | Listo |
-| 3 | Backend Flask + SQLite3 | Pendiente |
+| 3 | Backend Flask + SQLite3 | En desarrollo |
 | 4 | Frontend WebSockets | Pendiente |
 
 ---
