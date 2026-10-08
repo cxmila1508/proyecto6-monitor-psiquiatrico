@@ -134,3 +134,6 @@ Convención de mensajes: `etapaN: qué quedó funcionando` o
 | 23/09/2026 | docs | Estructuración de directorio docs/, actualización de pseudocódigo no bloqueante y diagramas del sistema | Gabriela |
 | 23/09/2026 | Documentación | Estandarización de referencias.md bajo norma IEEE según orden de cita del informe | Gabriela |
 | 23/09/2026 | firmware | Reorganización modular y desacoplamiento de etapas 2, 3 y 4 en firmware/ | Gabriela |
+|08/10/2026 |Firmware| Refactorización de nomenclatura: migración de etapas a módulos independientes y actualización de comentarios técnicos|Gabriela |
+|08/10/2026 |6/lot| Integración de modulo6_iot.ino: transmisión segura Wi-Fi en núcleo 0, cifrado AES-128-CTR con sal, HMAC-SHA256 y plantillas de credenciales|Gabriela |
+|08/10/2026 |Informe| Redacción de sección Módulo 6 (Nodo IoT), incorporación de registro fotográfico del prototipo, gráficos/tablas de datos experimentales adquiridos y corrección general del informe|Camila |
